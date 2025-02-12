@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animació de Mario</title>
+    <style>
+        body {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            height: 100vh;
+            background-color: #87CEEB;
+            overflow: hidden;
+            position: relative;
+            background-image: url('/home/smx2b/Baixades/fondo mario.jpg'); 
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+        }
+
+        
+        @keyframes marioAnimation {
+            0% { background-image: url('/home/smx2b/Baixades/mario1-removebg-preview.png'); }
+            11% { background-image: url('/home/smx2b/Baixades/mario2-removebg-preview.png'); }
+            22% { background-image: url('/home/smx2b/Baixades/mario3-removebg-preview.png'); }
+            33% { background-image: url('/home/smx2b/Baixades/mario4-removebg-preview.png'); }
+            44% { background-image: url('/home/smx2b/Baixades/mario5-removebg-preview.png'); }
+            55% { background-image: url('/home/smx2b/Baixades/mario6-removebg-preview.png'); }
+            66% { background-image: url('/home/smx2b/Baixades/mario7-removebg-preview.png'); }
+            77% { background-image: url('/home/smx2b/Baixades/mario8-removebg-preview.png'); }
+            88% { background-image: url('/home/smx2b/Baixades/mario9-removebg-preview.png'); }
+            100% { background-image: url('/home/smx2b/Baixades/mario1-removebg-preview.png'); }
+        }
+
+        @keyframes moveMario {
+            0% { transform: translateX(-400px) scale(1); } 
+            100% { transform: translateX(100vw) scale(1); } 
+        }
+
+        .mario {
+            width: 400px; 
+            height: 400px;
+            position: absolute;
+            bottom: 20px;
+            left: 0; 
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            animation: marioAnimation 3s infinite steps(9), moveMario 10s linear infinite; 
+        }
+
+        
+        @keyframes sunAnimation {
+            0% { background-image: url('/home/smx2b/Baixades/sol1-removebg-preview.png'); }
+            50% { background-image: url('/home/smx2b/Baixades/sol2-removebg-preview.png'); }
+            100% { background-image: url('/home/smx2b/Baixades/sol3-removebg-preview.png'); }
+        }
+
+        .sun {
+            width: 250px; 
+            height: 250px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: sunAnimation 3s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="mario"></div>
+    <div class="sun"></div> 
+</body>
+</html>
+
